@@ -1,7 +1,7 @@
 
 import 'dotenv/config';
 import express from 'express';
-import dbConnect from './connect/dbconnect.js';
+import dbConnect from './connect/dbConnect.js';
 import userRouter from './routes/userRouter.js';
 import fileUpload from 'express-fileupload';
 import productRouter from "./routes/productRouter.js";
