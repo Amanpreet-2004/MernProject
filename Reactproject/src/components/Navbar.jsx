@@ -14,7 +14,7 @@ const Navbar = () => {
       const userId = localStorage.getItem("userId");
       if (userId && userId !== "undefined" && userId !== "null") {
         // ✅ Corrected URL (Cart.jsx wala endpoint)
-        const res = await axios.get(`http://localhost:4644/cart/get/${userId}`);
+        const res = await axios.get(`https://mernproject-1-mpba.onrender.com`);
         
         // ✅ Corrected Data Key (res.data.body check karein)
         if (res.data.success && Array.isArray(res.data.body)) {

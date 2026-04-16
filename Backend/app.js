@@ -1,5 +1,5 @@
 
-
+import 'dotenv/config';
 import express from 'express';
 import dbConnect from './connect/dbconnect.js';
 import userRouter from './routes/userRouter.js';
@@ -16,8 +16,8 @@ app.use(express.json());
 app.use(cors());
 app.use(fileUpload());
 
-const port = 4644;
-
+// const port = 4644;
+const PORT = process.env.PORT || 4644;
 // --- Database Connection ---
 dbConnect();
 
@@ -68,6 +68,6 @@ app.use("/product", productRouter); // e.g., http://localhost:4644/product/all
 app.use("/cart", cartRouter);       // e.g., http://localhost:4644/cart/get/:id
 
 // --- Server Start ---
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
