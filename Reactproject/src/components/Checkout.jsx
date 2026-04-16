@@ -136,7 +136,7 @@ const Checkout = () => {
 
     try {
       // 1. Backend ko data bhejein email ke liye
-      const response = await axios.post("http://localhost:4644/send-email", formData);
+      const response = await axios.post("https://mernproject-x9rt.onrender.com/send-email", formData);
 
       if (response.data.status === 200) {
         toast.success("✅ Order placed & Confirmation email sent!");

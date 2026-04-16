@@ -19,7 +19,7 @@ const Cart = () => {
       return;
     }
     try {
-      const res = await axios.get(`http://localhost:4644/cart/get/${userId}`);
+      const res = await axios.get(`https://mernproject-x9rt.onrender.com/cart/get/${userId}`);
       if (res.data.success) {
         setCartItems(res.data.body);
       }
@@ -34,7 +34,7 @@ const Cart = () => {
   // 2. Remove Item from Cart
   const handleRemove = async (id) => {
     try {
-      const res = await axios.delete(`http://localhost:4644/cart/delete/${id}`);
+      const res = await axios.delete(`https://mernproject-x9rt.onrender.com/cart/delete/${id}`);
       if (res.data.success) {
         toast.success("Item removed!");
         fetchCart(); // List refresh karein

@@ -45,7 +45,7 @@ const Product = () => {
       //   quantity: 1
       // });
 // handleAddToCart ke andar ye update karein
-const response = await axios.post("http://localhost:4644/cart/add", {
+const response = await axios.post("https://mernproject-x9rt.onrender.com/cart/add", {
     userId: userId,
     productId: String(product.id), // ID ko string mein convert kiya
     name: product.name,

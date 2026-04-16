@@ -18,7 +18,7 @@ const Login = () => {
     e.preventDefault();
     try {
       // 1. Backend API call
-      const res = await axios.post("http://localhost:4644/user/login", data);
+      const res = await axios.post("https://mernproject-x9rt.onrender.com/user/login", data);
 
       // 2. Aapke Postman screenshot ke mutabiq 'success' check karein
       if (res.data.success) {

@@ -25,7 +25,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:4644/user/signup",
+        "https://mernproject-x9rt.onrender.com/user/signup",
         data
       );
 
